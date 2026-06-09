@@ -4,10 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SCB — Tableau de Bord Financier & Boursier</title>
+<meta name="description" content="Portail investisseur SCB : analyse financière, boursière et prédictive des Ciments de Bizerte avec verdict d'investissement, indicateurs clés et scénarios de risque.">
+<meta name="theme-color" content="#f8f4ec">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="SCB — Portail investisseur | Les Ciments de Bizerte">
+<meta property="og:description" content="Analyse financière, boursière et prédictive de SCB avec verdict investisseur, risques clés et lecture probabiliste à 5 ans.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bouzaienemafez-tech.github.io/pi-/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SCB — Portail investisseur">
+<meta name="twitter:description" content="Diagnostic financier et boursier des Ciments de Bizerte pour évaluer si le titre est investissable ou non.">
+<link rel="canonical" href="https://bouzaienemafez-tech.github.io/pi-/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap">
 <script src="./chart.umd.js"></script>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
-
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
@@ -41,6 +53,43 @@
     font-size: 14px;
     line-height: 1.5;
     padding: 0;
+  }
+
+  a { color: inherit; }
+
+  .skip-link {
+    position: absolute;
+    left: 16px;
+    top: -48px;
+    z-index: 2000;
+    background: #ffffff;
+    color: var(--text);
+    border: 1px solid var(--border2);
+    border-radius: 10px;
+    padding: 10px 14px;
+    text-decoration: none;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+    transition: top 0.15s ease;
+  }
+  .skip-link:focus {
+    top: 16px;
+  }
+
+  :focus-visible {
+    outline: 3px solid rgba(217, 119, 6, 0.35);
+    outline-offset: 3px;
+  }
+
+  .visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
 
   /* HEADER */
@@ -648,10 +697,12 @@
 </head>
 <body>
 
-<div class="header">
+<a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
+<header class="header">
   <div class="header-left">
     <div class="header-ticker">BVMT · SCB · TN0007350010</div>
-    <div class="header-title">Les Ciments de Bizerte</div>
+    <h1 class="header-title">Les Ciments de Bizerte</h1>
     <div class="header-sub" style="margin-bottom:10px">Analyse financière &amp; boursière complète · 2008–2025</div>
     <div style="display:flex;gap:8px;flex-wrap:wrap;">
       <span class="header-badge badge-loss">13 exercices déficitaires</span>
@@ -665,9 +716,17 @@
     <div class="header-perf">−93,3% depuis IPO (8,20 DT)</div>
     <div style="font-size:11px;color:var(--text3)">Volume total: 9 888 255 titres</div>
   </div>
-</div>
+</header>
 
-<div class="main">
+<main class="main" id="main-content">
+  <noscript>
+    <div class="chart-card" style="margin-bottom:20px;border-color:rgba(192,57,43,0.2);background:rgba(217,45,32,0.06);">
+      <div class="chart-title" style="color:var(--red-light);">JavaScript requis pour les graphiques interactifs</div>
+      <div class="section-copy">
+        Cette page reste lisible sans JavaScript, mais les graphiques ne s'afficheront pas. Activez JavaScript pour voir les visualisations complètes.
+      </div>
+    </div>
+  </noscript>
 
   <div class="verdict-hero">
     <div>
@@ -1127,12 +1186,12 @@
     </div>
   </div>
 
-</div>
+</main>
 
-<div class="footer">
+<footer class="footer">
   <span>Sources: CMF.TN (données financières) · ilboursa.com (données boursières)</span>
   <span>SCB — Les Ciments de Bizerte · ISIN TN0007350010 · Données 2008–2025</span>
-</div>
+</footer>
 
 <script>
 const YEARS = [2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024];
